@@ -69,7 +69,7 @@ public class studentedit extends HttpServlet {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection c = DriverManager.getConnection(
-					"jdbc:mysql://localhost/paria?useUnicode=true&characterEncoding=utf-8", "root", "root");
+					"jdbc:mysql://localhost/paria?useUnicode=true&characterEncoding=utf-8", "root", "test");
 			/*Statement s=c.createStatement();
 			s.executeUpdate("insert into details (uid,firstname) values ('"+uid+"','"+stdnamep[1]+"') ");*/
 			PreparedStatement st = c.prepareStatement("update details set uid=?,firstname=?,fathername=?,lastname=?,religion=?,subreligion=?,cast_=?,birthplace=?,birthdate=?,lastschool=?,admissiondate=?,admissionstd=?,currentstd=?,since=?,leavingdate=?,totalattendance=?,leavingreason=?,study_growth=?,behavior=?,note=?,gender=?,adharno=?,Bankacno=?,IFSCcode=?,Branch=?,Contact=?,regno=? where uid='"+editid+"' ");

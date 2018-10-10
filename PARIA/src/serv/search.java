@@ -39,7 +39,7 @@ public class search extends HttpServlet {
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection c = DriverManager.getConnection("jdbc:mysql://localhost/paria?useUnicode=true&characterEncoding=utf-8", "root", "root");
+			Connection c = DriverManager.getConnection("jdbc:mysql://localhost/paria?useUnicode=true&characterEncoding=utf-8", "root", "test");
 			Statement s=c.createStatement();
 			ResultSet r=s.executeQuery("select uid,firstname,fathername,lastname from details where uid like '%"+src+"%' ");
 			out.print("<center><h2>Results</h2>");
